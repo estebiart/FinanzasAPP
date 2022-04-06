@@ -1,0 +1,41 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Finanzas App</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Email es requerido</span>
+        <span *ngIf="email.errors?.email">Email invalido</span>
+      </div>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Contraseña requerida</span>
+        <span *ngIf="password.errors?.minlength">Contraseña mayor a 6 caracteres</span>
+      </div>
+    </div>
+ 
+    <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Entrar</ion-button>
+    <ion-button type="button" expand="block" color="light" fill="clear">Registrate
+    </ion-button>
+ 
+    <ion-button type="button" expand="block" color="tertiary">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Entra con Google
+    </ion-button>
+    <ion-button type="button" expand="block" color="tertiary">
+      <ion-icon name="logo-apple" slot="start"></ion-icon>
+     Entra con Apple
+    </ion-button>
+  </form>
+</ion-content>

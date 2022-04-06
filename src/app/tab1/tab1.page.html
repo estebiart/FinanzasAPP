@@ -1,17 +1,137 @@
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Searchbar with a placeholder -->
+<ion-searchbar placeholder="Buscar..."></ion-searchbar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+
+<ion-content
+[scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
+
+
+  
+  <ion-content>
+    <ion-slides pager="true">
+   
+      <ion-slide>
+        <ion-text color="light">
+            
+            <ion-card>
+              <ion-card-header>
+
+            
+          <img src="https://pikwizard.com/photos/silver-camera--1eb024bec2f72152a0715a5f776a4d82-m.jpg"
+              style="margin:0;width:100%" alt=""/>
+            
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+                <ion-button (click)="next()" fill="outline" color="dark">Next</ion-button>
+                
+              </ion-card-header>
+            
+              <ion-card-content>
+                Keep close tdfsdo Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+            </ion-card>
+
+          </ion-text>
+      </ion-slide>
+      <ion-slide>
+        <ion-text color="light">
+            
+            <ion-card>
+              <ion-card-header>
+
+            
+          <img src="https://pikwizard.com/photos/cent-coins-euro-finance--aed5b48359244706bdd4bab4172d4b82-m.jpg"
+              style="margin:0;width:100%" alt=""/>
+            
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+                <ion-button (click)="next()" fill="outline" color="dark">Next</ion-button>
+                
+              </ion-card-header>
+            
+              <ion-card-content>
+                Keep close tdfsdo Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+            </ion-card>
+
+          </ion-text>
+      </ion-slide>
+      <ion-slide>
+        <ion-text color="light">
+            
+            <ion-card>
+              <ion-card-header>
+
+            
+          <img src="https://pikwizard.com/photos/business-people-in-office--40aa44c416588c39cf4b182667c18d19-m.jpg"
+              style="margin:0;width:100%" alt=""/>
+            
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+                <ion-button (click)="next()" fill="outline" color="dark">Next</ion-button>
+                
+              </ion-card-header>
+            
+              <ion-card-content>
+                Keep close tdfsdo Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+            </ion-card>
+
+          </ion-text>
+      </ion-slide>
+      <ion-slide>
+        <ion-text color="light">
+            
+            <ion-card>
+              <ion-card-header>
+
+            
+          <img src="https://pikwizard.com/photos/airline-airplane-architecture-background--46ca35616fcc68958767f92157904207-m.jpg"
+              style="margin:0;width:100%" alt=""/>
+            
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+                <ion-button (click)="next()" fill="outline" color="dark">Next</ion-button>
+                
+              </ion-card-header>
+            
+              <ion-card-content>
+                Keep close tdfsdo Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+            </ion-card>
+
+          </ion-text>
+      </ion-slide>
+   
+    </ion-slides>
+  </ion-content>
+
+  
+
+
+
+
+  
+
+
+
